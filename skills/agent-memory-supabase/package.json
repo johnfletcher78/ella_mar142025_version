@@ -1,0 +1,14 @@
+{
+  "name": "agent-memory-supabase",
+  "version": "1.0.0",
+  "description": "Supabase memory storage for OpenClaw agents",
+  "type": "module",
+  "main": "run.mjs",
+  "scripts": {
+    "test": "node run.mjs loadMemories"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0",
+    "dotenv": "^16.3.1"
+  }
+}

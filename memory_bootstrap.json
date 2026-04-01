@@ -1,0 +1,18 @@
+[
+ {
+ "id": "d7bd9355-04b4-4aaf-b316-2b14d7c8c576",
+ "summary": "Test memory: onboarding completed",
+ "details": {
+ "note": "first successful run"
+ },
+ "created_at": "2026-03-18T17:45:42.416259+00:00"
+ },
+ {
+ "id": "a518a42c-64bd-4bca-b26e-d76324a824d8",
+ "summary": "Test memory: onboarding completed",
+ "details": {
+ "note": "first successful run"
+ },
+ "created_at": "2026-03-18T17:45:33.391924+00:00"
+ }
+]
