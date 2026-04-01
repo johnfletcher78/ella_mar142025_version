@@ -14,6 +14,7 @@
 - 2026-03-19: Added `website-builder-agent` (with optional Hugo stub) and enhanced `deploy-agent` (SSH/SCP placeholder). Updated `mission-control-agent` to orchestrate build → design → deploy workflow.
 - 2026-03-19: Added intake pipeline – channel‑normalizer, client‑intake‑bot, formbricks‑webhook, webchat‑intake, intake_sessions folder, safeBins curl/wget, webhook endpoint /webhook/formbricks registered.
 - 2026-03-19: LESSONS.md created to permanently record engineering lessons and guidelines for the agency pipeline.
+- 2026-04-01: Supabase memory system initialized and tested successfully. Agent can now log and retrieve memories from `jnaifrwipyjggpnntkvk.supabase.co`.
 
 ## CRITICAL SYSTEM GUARDRAILS — Never violate these
 
