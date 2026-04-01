@@ -19,6 +19,8 @@ dotenv.config({ path: join(__dirname, '.env') });
 
 const CHROMA_URL = process.env.CHROMA_URL || 'http://localhost:8000';
 const COLLECTION_NAME = process.env.CHROMA_COLLECTION || 'ella_memories';
+const OLLAMA_URL = process.env.OLLAMA_URL || 'http://172.17.0.1:11434';
+const OLLAMA_MODEL = process.env.OLLAMA_MODEL || 'nomic-embed-text';
 const TENANT = 'default';
 const DATABASE = 'default';
 
@@ -60,8 +62,32 @@ async function getCollectionId() {
   return collectionId;
 }
 
-// Simple hash-based embedding
-function getEmbedding(text) {
+// Get embeddings from Ollama (or hash-based fallback)
+async function getEmbedding(text) {
+  try {
+    const response = await fetch(`${OLLAMA_URL}/api/embeddings`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: OLLAMA_MODEL,
+        prompt: text
+      })
+    });
+    
+    if (!response.ok) {
+      throw new Error(`Ollama ${response.status}: ${await response.text()}`);
+    }
+    
+    const data = await response.json();
+    return data.embedding;
+  } catch (err) {
+    console.error(JSON.stringify({ warning: `Ollama failed: ${err.message}, using hash fallback` }));
+    return hashEmbedding(text);
+  }
+}
+
+// Fallback hash-based embedding
+function hashEmbedding(text) {
   let hash = 0;
   for (let i = 0; i < text.length; i++) {
     const char = text.charCodeAt(i);
