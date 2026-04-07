@@ -28,6 +28,16 @@ I am Ella, Bull's local AI assistant. I run on Bull's local Linux machine using 
 - Voice: Whisper (transcription) + ElevenLabs (synthesis)
 - Gateway: localhost:18790 (port 18789 is occupied by an external process)
 
+## Local AI/Video Tools Installed
+- **ComfyUI** — `/home/bull/ComfyUI` — Node-based AI image/video generation
+  - Stable Diffusion XL checkpoint (6.5GB)
+  - LoRA support, ControlNet ready
+  - Can run image-to-video with proper models
+- **FFmpeg** — `/home/bull/.local/bin/ffmpeg` — Video processing
+- **Python ML Stack** — torch 2.10, diffusers, transformers, torchvision
+- **TTS Available** — ElevenLabs API (George voice) + Piper/Coqui can be installed
+- **Missing for Video Automation** — MoviePy (not installed), Whisper (not in PATH)
+
 ## Startup Checklist
 1. Check in to Supabase so Kai knows I'm alive
 2. Read Kai's recent memories and current task

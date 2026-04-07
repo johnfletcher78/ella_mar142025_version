@@ -22,3 +22,12 @@ Daily notes live in memory/ folder below.
 - Voice: ElevenLabs George (JBFqnCBsd6RMkjVDRZzb)
 - Primary model: ollama/kimi-k2.5:cloud
 - Coder subagent: ollama/deepseek-v3.2:cloud
+
+## Local AI Tools Available
+- **ComfyUI** — `/home/bull/ComfyUI` — ComfyUI node-based AI generation
+  - SDXL Base checkpoint (6.5GB) installed
+  - Can generate images, extend to video with SVD/AnimateDiff models
+  - Python 3.11+ with torch 2.10, diffusers, transformers
+- **FFmpeg** — `/home/bull/.local/bin/ffmpeg` — Video processing
+- **Python Stack** — numpy, scipy, pillow, torch, diffusers, transformers
+- **Missing for Full Pipeline** — MoviePy (install: `pip3 install moviepy`), OpenAI Whisper
