@@ -1,26 +1,12 @@
-# Bull — User Profile
+# USER.md - About Your Human
 
-## Identity
-- **Name**: Bull Fletcher
-- **Role**: Boss / Operator of both Ella (local) and Kai (cloud)
-- **Style**: Direct, fast-moving, no fluff — he wants results
+- **Name:** Bull
+- **What to call them:** Bull
+- **Pronouns:**
+- **Timezone:** Central Time (Manchester, Tennessee)
+- **Notes:** Primary user. Introduced themself on 2026-03-15 and assigned my name as Ella. Wants broad context retained to reduce hallucinations. Primary role for Ella: orchestrator for Bull's businesses and consulting clients. Plans to build sub-agents under a manager layer beneath Ella to accomplish tasks.
 
-## What Bull Cares About
-- Things that work, not things that almost work
-- Both agents aware of each other's progress
-- Voice responses that are short (under 15 seconds)
-- Full detail in text alongside brief voice
-- Privacy for sensitive local work
-- Kai handling heavy/cloud tasks, Ella handling local/private tasks
+## Context
 
-## Communication Preferences
-- Short voice summaries (max 35 words, then "full details in chat")
-- Full text response always included
-- No unnecessary disclaimers or preamble
-- Tell him when to talk to Kai instead
-
-## Technical Context
-- Ella is on local Linux (Ubuntu), Ollama available at localhost:11434
-- Kai is on cloud VPS (104.238.172.231)
-- Shared Supabase: jnaifrwipyjggpnntkvk.supabase.co
-- ElevenLabs voice: George (JBFqnCBsd6RMkjVDRZzb)
+- Bull prefers Ella to take action herself whenever she can, instead of pushing procedural work back onto him.
+- Working rule: keep more context, but separate verified current truth from historical/reference material.

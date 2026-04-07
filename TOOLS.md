@@ -1,78 +1,31 @@
-# TOOLS.md - Local Notes
+# TOOLS.md - Ella Local Notes
 
-Skills define _how_ tools work. This file is for _your_ specifics — the stuff that's unique to your setup.
+## Current Machine
+- Host: bulls-AI-PC (Ubuntu)
+- GPU: Nvidia RTX 4080
+- User: bull
+- Workspace: ~/.openclaw/workspace
+- Model: ollama/gpt-oss:120b-cloud (local GPU‑accelerated)
+- Always use python3, never python
 
-## What Goes Here
+## Atlas VPS
+- Host: srv1365311
+- IP: 187.77.20.204
+- User: root
+- SSH Key: ~/.ssh/vps_key
 
-Things like:
+## Local Machine Details (replaces old Atlas VPS info)
+- This is a local development machine, not a remote VPS.
+- No SSH key or remote IP is needed for primary operations.
+- OpenClaw runs directly in the local environment.
 
-- Camera names and locations
-- SSH hosts and aliases
-- Preferred voices for TTS
-- Speaker/room names
-- Device nicknames
-- Anything environment-specific
+## Sites (running on this machine)
+- Preview server: port 8095 (served locally)
+- mission-control, beccas-closet, fresh-and-clean-auto-detail
+- Traefik (local) – optional reverse‑proxy for preview URLs
 
-## Examples
-
-```markdown
-### Cameras
-
-- living-room → Main area, 180° wide angle
-- front-door → Entrance, motion-triggered
-
-### SSH
-
-- home-server → 192.168.1.100, user: admin
-
-### TTS
-
-- Preferred voice: "Nova" (warm, slightly British)
-- Default speaker: Kitchen HomePod
-```
-
-## Why Separate?
-
-Skills are shared. Your setup is yours. Keeping them apart means you can update skills without losing your notes, and share skills without leaking your infrastructure.
-
----
-
-## Video & AI Tools (Local)
-
-### ComfyUI — AI Image/Video Generation
-- **Location:** `/home/bull/ComfyUI`
-- **Models:** SDXL Base (6.5GB), Dreamshaper XL
-- **Can do:** Text-to-image, image-to-image, video generation (needs SVD models)
-- **Start:** `cd /home/bull/ComfyUI && python main.py`
-- **Custom nodes:** Mostly empty, can add AnimateDiff/SVD nodes
-
-### FFmpeg — Video Processing
-- **Path:** `/home/bull/.local/bin/ffmpeg`
-- **ffprobe:** Available (for metadata inspection)
-- **Use for:** Format conversion, clipping, merging, filters
-
-### MoviePy — Python Video Editing
-- **Version:** 2.2.1 (installed April 2025)
-- **Use for:** Programmatic video assembly, text overlays, transitions
-- **Example:** `/home/bull/.openclaw/workspace/scripts/summer_beer_short.py`
-- **Output:** 1080x1920 (9:16) vertical videos for YouTube Shorts
-
-### Python ML Stack
-- **torch:** 2.10.0 (with CUDA support)
-- **diffusers:** 0.37.0 — HuggingFace diffusion models
-- **transformers:** 5.3.0 — LLM/vision models
-- **torchvision:** 0.25.0 — Image transforms
-- **pillow:** 11.3.0 — Image manipulation
-- **numpy/scipy:** Numerical computing
-
-### Voice/TTS
-- **ElevenLabs API:** George voice (JBFqnCBsd6RMkjVDRZzb)
-- **Local TTS:** Piper or Coqui (not installed, can add)
-
-### OpenAI Whisper — Transcription
-- **Version:** 20250625 (installed April 2025)
-- **Use for:** Auto-generating subtitles for Shorts
-
----
-
-Add whatever helps you do your job. This is your cheat sheet.
+## Rules
+- Never use openrouter/auto
+- Always use python3 not python
+- Do not take irreversible actions without confirmation
+- Do not expose credentials in chat

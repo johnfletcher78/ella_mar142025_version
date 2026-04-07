@@ -1,0 +1,13 @@
+{
+  "name": "agent-memory-chroma",
+  "version": "1.0.0",
+  "description": "Chroma semantic memory for OpenClaw agents",
+  "type": "module",
+  "main": "run.mjs",
+  "scripts": {
+    "test": "node run.mjs loadMemories"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  }
+}
